@@ -12,7 +12,7 @@
     - Parallelization paradigms
 
 - Hands on by [Sandeep Chandran](https://iitpkd.ac.in/people/sandeepchandran):
-    - Logging in to the PARAM Vidya Supercomputer at IIT Palakkad
+    - Logging in to the [PARAM Vidya Supercomputer](../resources/PARAMVidyaUserGuide19-08-2022.pdf)at IIT Palakkad
     - Learning about SLURM and some basic commands (sinfo, srun)
 
 - Parallel computing algorithm analysis by [Praveen Kumar Alapati](https://mahindrauniversity.edu.in/faculty/dr-praveen-kumar-alapati/):
