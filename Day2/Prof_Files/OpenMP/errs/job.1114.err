@@ -1,0 +1,4 @@
+omp1.c:2:18: fatal error: stdio.h: No such file or directory
+ #include<stdio.h>
+                  ^
+compilation terminated.

@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH --mail-user=user@iitpkd.ac.in
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --job-name=mpi_job
+#SBATCH --account=cdac
+#SBATCH --time=00:10:00         
+#SBATCH --nodes=2              
+#SBATCH --ntasks-per-node=2   
+#SBATCH --mem-per-cpu=1GB
+#SBATCH --output=mpi_job-%j.out
+#SBATCH --error=mpi_job-%j.err
+#SBATCH --partition=standard
+
+#
+#
+# Your code below this line
+# Load OpenMPI environment module.
+module load openmpi3
+
+# run the parallel job
+mpirun -np 2 ./MatrixAdd 
