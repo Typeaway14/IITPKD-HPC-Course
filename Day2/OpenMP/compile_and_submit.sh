@@ -5,13 +5,14 @@
 #Date:20th June,2023
 #Reason: Automate the compilation and job submission process on the PARAMvidya 
 
-VALUE="$@"
+ALL="$@"
+VALUE=$1
 
 gcc ./programs/$VALUE.c -o ./objects/$VALUE.o -fopenmp
-JOB_ID=$(sbatch ./submit.sh $VALUE | grep -Eo "[0-9]+")
+JOB_ID=$(sbatch ./submit.sh $ALL | grep -Eo "[0-9]+")
 while squeue | grep $JOB_ID > /dev/null
 do
-	echo waiting...
+	echo "[$JOB_ID]waiting..."
 done
 cat ./outputs/output.$JOB_ID.out
 
