@@ -1,0 +1,11 @@
+./programs/matrix_add.c:1:9: fatal error: stdio.h: No such file or directory
+ #include<stdio.h>
+         ^~~~~~~~~
+compilation terminated.
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node cn01 exited on signal 11 (Segmentation fault).
+--------------------------------------------------------------------------
