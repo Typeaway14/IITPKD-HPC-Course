@@ -1,5 +1,10 @@
 #!/bin/bash
 
+
+#Author:Typeaway14
+#Date:20th June,2023
+#Reason: Automate the compilation and job submission process on the PARAMvidya 
+
 VALUE="$@"
 
 gcc ./programs/$VALUE.c -o ./objects/$VALUE.o -fopenmp

@@ -1,4 +1,10 @@
 #!/bin/bash
+
+
+#Author:Typeaway14
+#Date:20th June,2023
+#Reason: Automate the compilation and job submission process on the PARAMvidya 
+
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=16
 #SBATCH --error=errors/error.%J.err
