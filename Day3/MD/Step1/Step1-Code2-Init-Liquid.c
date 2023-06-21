@@ -14,7 +14,7 @@ int main()
 
 	//Initialize constant
 	lx = 10.0;
-	n = 64;
+	n = 6000;
 	mindist = 0.9;
         mindistsq = mindist*mindist;
           
@@ -37,6 +37,7 @@ int main()
                    dZ = (ztmp-z[j]) - lx*lround((ztmp-z[j])/lx);
                        
 		   rijsq = dX*dX + dY*dY + dZ*dZ;
+		   if(rijsq<mindistsq) atomnotdone =1;
 		}
 		atomdone = 1-atomnotdone;
                   
