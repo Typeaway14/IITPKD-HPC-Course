@@ -203,9 +203,10 @@ int main(int argc, char *argv[]){
 		  r = sqrt(rsq);
 
 		  if(rsq <rcsq){ 
-                    Forcexlj = 1.0;
-		    Forceylj = 1.0;
-		    Forcezlj = 1.0;
+                    Forcexlj = (48/pow(r,2))*(1/pow(r,12) - (0.5/pow(r,6)))*xij;
+		    Forceylj = (48/pow(r,2))*(1/pow(r,12) - (0.5/pow(r,6)))*yij;
+		    Forcezlj = (48/pow(r,2))*(1/pow(r,12) - (0.5/pow(r,6)))*zij;
+
 		       
 		    Fxparlj = Fxparlj + Forcexlj;
 		    Fyparlj = Fyparlj + Forceylj;
