@@ -1,0 +1,1 @@
+gcc -pg --no-pie -fno-builtin *filename* -lm -lgsl

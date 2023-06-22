@@ -1,0 +1,36 @@
+# 3d Lennard-Jones melt
+
+units		lj
+atom_style	atomic
+
+lattice	sc 0.5
+region		box block 0 20 0 20 0 20
+create_box	1 box
+create_atoms	1 box
+mass		1 1.0
+#read_data	Configuration-PBC.int
+
+velocity        all create 1.5 22233 mom yes rot yes dist gaussian
+
+pair_style	lj/cut 2.5
+pair_coeff	1 1 1.0 1.0 2.5
+
+neighbor	0.3 bin
+neigh_modify	every 20 delay 0 check no
+
+thermo_style    custom step temp press pe ke etotal vol
+thermo          1000
+thermo_modify   flush yes
+
+fix		1 all nve
+
+#dump            1 all custom 1000 Data.dump id type xu yu zu
+#dump_modify     1 flush yes
+
+#dump		2 all image 25 image.*.jpg type type axes yes 0.8 0.02 view 60 -30
+#dump_modify	2 pad 3
+
+#dump		3 all movie 25 movie.mpg type type axes yes 0.8 0.02 view 60 -30
+#dump_modify	3 pad 3
+
+run		1000000
