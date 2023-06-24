@@ -15,13 +15,16 @@ int main(int argc, char *argv[]) {
   int n;
   int l, m, r; // left, middle, right
   int rank, size;
-  n = 1000;
+  n = 100000;
   int guinea_array[n];
+  int limit,start,end;
 
   MPI_Init(&argc, &argv);
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Comm_size(MPI_COMM_WORLD, &size);
-
+  limit = n/size;
+  start = rank*limit;
+  end = start+limit;
   if (rank == 0) {
     init_array_random(
         guinea_array,
@@ -30,15 +33,14 @@ int main(int argc, char *argv[]) {
 
   // print_array(guinea_array, n);
 
-  int local_size = n / size;
-  int guinea_array_local[local_size];
+  int guinea_array_local[limit];
   double start_time = MPI_Wtime();
-  MPI_Scatter(guinea_array, local_size, MPI_INT, guinea_array_local, local_size,
+  MPI_Scatter(guinea_array, limit, MPI_INT, &(guinea_array[start]), limit,
               MPI_INT, 0, MPI_COMM_WORLD);
 
-  mergesort(guinea_array_local, 0, local_size - 1);
+  mergesort(guinea_array, start, end-1);
 
-  MPI_Gather(guinea_array_local, local_size, MPI_INT, guinea_array, n, MPI_INT,
+  MPI_Gather(&(guinea_array[start]), limit, MPI_INT, guinea_array,limit, MPI_INT,
              0, MPI_COMM_WORLD);
   MPI_Barrier(MPI_COMM_WORLD);
   MPI_Finalize();
@@ -46,8 +48,10 @@ int main(int argc, char *argv[]) {
   r = n - 1;
   mergesort(guinea_array, l, r);
   double end_time = MPI_Wtime();
+  if(rank==0){
   print_array(guinea_array, n);
   printf("\nTIME ELAPSED: %lf",end_time-start_time);
+  }
   return 1;
 }
 
