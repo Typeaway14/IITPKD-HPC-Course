@@ -15,11 +15,7 @@ int main(int argc, char *argv[]) {
   int n;
   int l, m, r; // left, middle, right
   int rank, size;
-  if (argc != 2) {
-    n = 1000;
-  } else {
-    n = atoi(argv[1]);
-  }
+  n = 1000;
   int guinea_array[n];
 
   MPI_Init(&argc, &argv);
@@ -36,6 +32,7 @@ int main(int argc, char *argv[]) {
 
   int local_size = n / size;
   int guinea_array_local[local_size];
+  double start_time = MPI_Wtime();
   MPI_Scatter(guinea_array, local_size, MPI_INT, guinea_array_local, local_size,
               MPI_INT, 0, MPI_COMM_WORLD);
 
@@ -48,7 +45,9 @@ int main(int argc, char *argv[]) {
   l = 0;
   r = n - 1;
   mergesort(guinea_array, l, r);
+  double end_time = MPI_Wtime();
   print_array(guinea_array, n);
+  printf("\nTIME ELAPSED: %lf",end_time-start_time);
   return 1;
 }
 

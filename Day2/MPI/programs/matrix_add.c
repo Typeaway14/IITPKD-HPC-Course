@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<mpi.h>
-#define MAT_SIZE 64 
+#define MAT_SIZE 32
 int main(int argc, char *argv[])
 {
 	int rank, size;

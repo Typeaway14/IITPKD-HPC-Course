@@ -22,4 +22,4 @@ module load gnu8
 module load openmpi3
 
 #Execute the following command
-mpirun -np $THREADS ./objects/$VALUE.o
+mpirun -np 4 ./objects/$VALUE.o
