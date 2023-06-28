@@ -323,7 +323,6 @@ int main(int argc, char *argv[]){
 	     printf("%d\t%f\t%f\t%f\n", mdstep, pe+ke, pe, ke);
 	   }*/
 
-	   /*
 	   //DUMP THE CONFIGURATIONS
 	   if(mdstep%100==0){
 	     fprintf(fpout, "%d\n\n", num);
@@ -335,7 +334,7 @@ int main(int argc, char *argv[]){
 	     for(i=1;i<=num;i++){
 		fprintf(fpout2, "%f\t%f\t%f\t%f\t%f\t%f\n", x[i] - lx*lround(x[i]/lx), y[i] - ly*lround(y[i]/ly), z[i] - lz*lround(z[i]/lz), vx[i], vy[i], vz[i]);
 	     }
-	   }*/
+	   }
 	}
 	fclose(fpout);
 	fclose(fpout2);
