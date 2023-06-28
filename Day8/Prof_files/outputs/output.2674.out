@@ -1,0 +1,13 @@
+no change     /opt/ohpc/pub/apps/conda/condabin/conda
+no change     /opt/ohpc/pub/apps/conda/bin/conda
+no change     /opt/ohpc/pub/apps/conda/bin/conda-env
+no change     /opt/ohpc/pub/apps/conda/bin/activate
+no change     /opt/ohpc/pub/apps/conda/bin/deactivate
+no change     /opt/ohpc/pub/apps/conda/etc/profile.d/conda.sh
+no change     /opt/ohpc/pub/apps/conda/etc/fish/conf.d/conda.fish
+no change     /opt/ohpc/pub/apps/conda/shell/condabin/Conda.psm1
+no change     /opt/ohpc/pub/apps/conda/shell/condabin/conda-hook.ps1
+no change     /opt/ohpc/pub/apps/conda/lib/python3.7/site-packages/xontrib/conda.xsh
+no change     /opt/ohpc/pub/apps/conda/etc/profile.d/conda.csh
+no change     /home/hsomvanshi/.bashrc
+No action taken.

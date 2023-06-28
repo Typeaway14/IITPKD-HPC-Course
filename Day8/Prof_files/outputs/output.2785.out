@@ -1,0 +1,113 @@
+Sequential(
+  (0): Linear(in_features=8, out_features=12, bias=True)
+  (1): ReLU()
+  (2): Linear(in_features=12, out_features=8, bias=True)
+  (3): ReLU()
+  (4): Linear(in_features=8, out_features=1, bias=True)
+  (5): Sigmoid()
+)
+Finished epoch 0, latest loss 0.5396296381950378
+Finished epoch 1, latest loss 0.5170374512672424
+Finished epoch 2, latest loss 0.5055299997329712
+Finished epoch 3, latest loss 0.5003131031990051
+Finished epoch 4, latest loss 0.49850139021873474
+Finished epoch 5, latest loss 0.5297437906265259
+Finished epoch 6, latest loss 0.5332382321357727
+Finished epoch 7, latest loss 0.5321168303489685
+Finished epoch 8, latest loss 0.533240556716919
+Finished epoch 9, latest loss 0.5430710911750793
+Finished epoch 10, latest loss 0.5421515107154846
+Finished epoch 11, latest loss 0.5480887293815613
+Finished epoch 12, latest loss 0.5418902039527893
+Finished epoch 13, latest loss 0.5511148571968079
+Finished epoch 14, latest loss 0.5547226071357727
+Finished epoch 15, latest loss 0.5448258519172668
+Finished epoch 16, latest loss 0.5417096614837646
+Finished epoch 17, latest loss 0.5444939136505127
+Finished epoch 18, latest loss 0.5485388040542603
+Finished epoch 19, latest loss 0.5483563542366028
+Finished epoch 20, latest loss 0.5463106632232666
+Finished epoch 21, latest loss 0.547177791595459
+Finished epoch 22, latest loss 0.551561713218689
+Finished epoch 23, latest loss 0.5485067963600159
+Finished epoch 24, latest loss 0.5535137057304382
+Finished epoch 25, latest loss 0.5484026074409485
+Finished epoch 26, latest loss 0.5425467491149902
+Finished epoch 27, latest loss 0.5387958884239197
+Finished epoch 28, latest loss 0.5124175548553467
+Finished epoch 29, latest loss 0.5179243683815002
+Finished epoch 30, latest loss 0.49608370661735535
+Finished epoch 31, latest loss 0.49997520446777344
+Finished epoch 32, latest loss 0.498887836933136
+Finished epoch 33, latest loss 0.4897877275943756
+Finished epoch 34, latest loss 0.4822007715702057
+Finished epoch 35, latest loss 0.4897489845752716
+Finished epoch 36, latest loss 0.500092625617981
+Finished epoch 37, latest loss 0.4820321500301361
+Finished epoch 38, latest loss 0.5032159686088562
+Finished epoch 39, latest loss 0.4862557649612427
+Finished epoch 40, latest loss 0.490744024515152
+Finished epoch 41, latest loss 0.49309295415878296
+Finished epoch 42, latest loss 0.4885597229003906
+Finished epoch 43, latest loss 0.4881227910518646
+Finished epoch 44, latest loss 0.48732155561447144
+Finished epoch 45, latest loss 0.4867146909236908
+Finished epoch 46, latest loss 0.4884357154369354
+Finished epoch 47, latest loss 0.47857677936553955
+Finished epoch 48, latest loss 0.47663071751594543
+Finished epoch 49, latest loss 0.468280553817749
+Finished epoch 50, latest loss 0.4732555150985718
+Finished epoch 51, latest loss 0.47255823016166687
+Finished epoch 52, latest loss 0.4736504554748535
+Finished epoch 53, latest loss 0.4802718460559845
+Finished epoch 54, latest loss 0.46795421838760376
+Finished epoch 55, latest loss 0.4870678186416626
+Finished epoch 56, latest loss 0.46758967638015747
+Finished epoch 57, latest loss 0.4752214550971985
+Finished epoch 58, latest loss 0.458363801240921
+Finished epoch 59, latest loss 0.48943614959716797
+Finished epoch 60, latest loss 0.4542406499385834
+Finished epoch 61, latest loss 0.46245232224464417
+Finished epoch 62, latest loss 0.4674939811229706
+Finished epoch 63, latest loss 0.47430041432380676
+Finished epoch 64, latest loss 0.4557555913925171
+Finished epoch 65, latest loss 0.46752896904945374
+Finished epoch 66, latest loss 0.45638588070869446
+Finished epoch 67, latest loss 0.47415947914123535
+Finished epoch 68, latest loss 0.4568389654159546
+Finished epoch 69, latest loss 0.4610828757286072
+Finished epoch 70, latest loss 0.4715433716773987
+Finished epoch 71, latest loss 0.45365896821022034
+Finished epoch 72, latest loss 0.46448490023612976
+Finished epoch 73, latest loss 0.4567394554615021
+Finished epoch 74, latest loss 0.45776933431625366
+Finished epoch 75, latest loss 0.44955015182495117
+Finished epoch 76, latest loss 0.4648936688899994
+Finished epoch 77, latest loss 0.4479812979698181
+Finished epoch 78, latest loss 0.45665985345840454
+Finished epoch 79, latest loss 0.4482536017894745
+Finished epoch 80, latest loss 0.4564720392227173
+Finished epoch 81, latest loss 0.4502011239528656
+Finished epoch 82, latest loss 0.44940653443336487
+Finished epoch 83, latest loss 0.4582939147949219
+Finished epoch 84, latest loss 0.4542015790939331
+Finished epoch 85, latest loss 0.45645079016685486
+Finished epoch 86, latest loss 0.446106493473053
+Finished epoch 87, latest loss 0.4539852440357208
+Finished epoch 88, latest loss 0.4622972309589386
+Finished epoch 89, latest loss 0.456380158662796
+Finished epoch 90, latest loss 0.4528051018714905
+Finished epoch 91, latest loss 0.4524093270301819
+Finished epoch 92, latest loss 0.44981256127357483
+Finished epoch 93, latest loss 0.4453934133052826
+Finished epoch 94, latest loss 0.4586394429206848
+Finished epoch 95, latest loss 0.4415620267391205
+Finished epoch 96, latest loss 0.460574746131897
+Finished epoch 97, latest loss 0.443479984998703
+Finished epoch 98, latest loss 0.4261237680912018
+Finished epoch 99, latest loss 0.4318939447402954
+tensor([  5.0000, 116.0000,  74.0000,   0.0000,   0.0000,  25.6000,   0.2010,
+         30.0000]) -> tensor([0.3318], grad_fn=<SelectBackward0>)
+tensor([  5.0000, 116.0000,  74.0000,   0.0000,   0.0000,  25.6000,   0.2010,
+         30.0000]) -> tensor([0.3318])
+Accuracy 0.7630208134651184

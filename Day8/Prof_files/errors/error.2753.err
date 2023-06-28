@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/urllib/request.py", line 1348, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "/usr/lib/python3.10/http/client.py", line 1282, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1328, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1277, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/lib/python3.10/http/client.py", line 1037, in _send_output
+    self.send(msg)
+  File "/usr/lib/python3.10/http/client.py", line 975, in send
+    self.connect()
+  File "/usr/lib/python3.10/http/client.py", line 1447, in connect
+    super().connect()
+  File "/usr/lib/python3.10/http/client.py", line 941, in connect
+    self.sock = self._create_connection(
+  File "/usr/lib/python3.10/socket.py", line 845, in create_connection
+    raise err
+  File "/usr/lib/python3.10/socket.py", line 833, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hsomvanshi/IITPKD-HPC-Course/Day8/Prof_files/programs/gpu4.py", line 6, in <module>
+    trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/cifar.py", line 65, in __init__
+    self.download()
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/cifar.py", line 139, in download
+    download_and_extract_archive(self.url, self.root, filename=self.filename, md5=self.tgz_md5)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/utils.py", line 434, in download_and_extract_archive
+    download_url(url, download_root, filename, md5)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/utils.py", line 134, in download_url
+    url = _get_redirect_url(url, max_hops=max_redirect_hops)
+  File "/usr/local/lib/python3.10/dist-packages/torchvision/datasets/utils.py", line 82, in _get_redirect_url
+    with urllib.request.urlopen(urllib.request.Request(url, headers=headers)) as response:
+  File "/usr/lib/python3.10/urllib/request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "/usr/lib/python3.10/urllib/request.py", line 519, in open
+    response = self._open(req, data)
+  File "/usr/lib/python3.10/urllib/request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "/usr/lib/python3.10/urllib/request.py", line 496, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python3.10/urllib/request.py", line 1391, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "/usr/lib/python3.10/urllib/request.py", line 1351, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
